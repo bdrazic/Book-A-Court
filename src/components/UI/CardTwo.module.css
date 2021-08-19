@@ -1,0 +1,9 @@
+.card {
+    width: auto;
+    align-self: center;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(247, 13, 13, 0.25);
+    border-radius: 0px;
+    background-color: white;
+    text-align: center;
+}

@@ -1,0 +1,13 @@
+.sports {
+    max-width: 60rem;
+    width: 90%;
+    margin: 2rem auto;
+    animation: meals-appear 1s ease-out forwards;
+  }
+
+  .sports h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 30px;
+    }

@@ -1,0 +1,45 @@
+.basketballCourts {
+    display: inline-block;
+    max-width: 60rem;
+    width: 90%;
+    margin: 2rem auto;
+  }
+  
+  .basketballCourts ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .basketballCourts li {
+    width: auto;
+    list-style: none;
+    margin: 1px;
+    margin-top: 0px;
+    padding: 1rem;
+    border-radius: 0px;
+    background-color: white;
+    border-bottom: 1px solid #000;
+    text-align: left;
+  }
+  
+  .basketballCourts title {
+    padding: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0;
+  }
+  
+  .basketballCourts input {
+    margin-left: 600px;
+    padding: 0px;
+  }
+  
+  .basketballCourts fieldset {
+    margin-top: -20px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border: none;
+    outline: none;
+  }
+  

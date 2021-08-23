@@ -29,40 +29,39 @@ const TENNIS_COURTS = [
   },
 ];
 
-
 const TennisCourts = (props) => {
   const [buttonIsShowing, setButtonIsShowingHandler] = useState(false);
   const showButtonHandler = (event) => {
     setButtonIsShowingHandler(true);
   };
 
-
   return (
-    <form>
-      <ul className={classes.tennisCourts}>
-        {TENNIS_COURTS.map((tennisCourtsItems) => (
-          <li key={tennisCourtsItems.id} className={classes.tennisCourts}>
-            <div>
-              <h2 className={classes.title}>{tennisCourtsItems.name}</h2>
-              <fieldset className={classes.fieldset}>
-                <input
-                  onClick={showButtonHandler}
-                  className={classes.input}
-                  type="radio"
-                  name="odabir"
-                  id={tennisCourtsItems.id}
-                  value={tennisCourtsItems.name}
-                />{" "}
-                <label for={tennisCourtsItems.id}>Rezerviraj</label>
-              </fieldset>
-            </div>
-            <div>{tennisCourtsItems.description}</div>
-            <div>{tennisCourtsItems.price} kn/h</div>
-          </li>
-        ))}
-      </ul>
-      {buttonIsShowing && <Button onClick={props.onShowCart}>Potvrdi</Button>}
-    </form>
+      <form id="forma1">
+        <ul className={classes.tennisCourts}>
+          {TENNIS_COURTS.map((tennisCourtsItems) => (
+            <li key={tennisCourtsItems.id} className={classes.tennisCourts}>
+              <div>
+                <h2 className={classes.title}>{tennisCourtsItems.name}</h2>
+                <fieldset className={classes.fieldset}>
+                  <input
+                    onClick={showButtonHandler}
+                    className={classes.input}
+                    type="radio"
+                    name="odabir"
+                    id={tennisCourtsItems.id}
+                    value={tennisCourtsItems.name}
+                    price={tennisCourtsItems.price}
+                  />{" "}
+                  <label for={tennisCourtsItems.id}>Rezerviraj</label>
+                </fieldset>
+              </div>
+              <div>{tennisCourtsItems.description}</div>
+              <div>{tennisCourtsItems.price} kn/h</div>
+            </li>
+          ))}
+        </ul>
+        {buttonIsShowing && <Button onClick={props.onShowCart}>Potvrdi</Button>}
+      </form>
   );
 };
 

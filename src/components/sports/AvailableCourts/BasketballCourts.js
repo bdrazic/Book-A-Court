@@ -18,7 +18,7 @@ const BasketballCourts = (props) => {
   };
 
   return (
-    <form>
+    <form id="forma2">
       <ul className={classes.basketballCourts}>
         {BASKETBALL_COURTS.map((basketballCourtsItems) => (
           <li
@@ -32,9 +32,10 @@ const BasketballCourts = (props) => {
                   onClick={showButtonHandler}
                   className={classes.input}
                   type="radio"
-                  name="odabir"
+                  name="odabir-kosarka"
                   id={basketballCourtsItems.id}
                   value={basketballCourtsItems.name}
+                  price={basketballCourtsItems.price}
                 />{" "}
                 <label for={basketballCourtsItems.id}>Rezerviraj</label>
               </fieldset>

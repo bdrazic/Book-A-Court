@@ -20,7 +20,7 @@ const Tennis = () => {
     <section className={classes.sports}>
       <CardTwo>
         {cartIsShowing && <Cart onClose={hideCartHandler} />}
-        <p>Dostupni tereni:</p>
+        <p>Dostupni tereni: </p>
         <img src={tennisLayoutImage} alt="Tennis courts layout" />
         <TennisCourts onShowCart={showCartHandler}/>
       </CardTwo>

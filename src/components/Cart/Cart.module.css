@@ -27,6 +27,7 @@
     padding: 0.5rem 2rem;
     border-radius: 25px;
     margin-left: 1rem;
+    font-family: 'Staatliches', cursive;
   }
   
   .actions button:hover,
@@ -43,4 +44,9 @@
   .actions .button {
     background-color: #8a2b06;
     color: white;
+  }
+
+  .h1 {
+    text-align: center;
+    font-family: 'Staatliches', cursive;
   }

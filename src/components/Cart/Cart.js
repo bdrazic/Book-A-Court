@@ -71,8 +71,8 @@ const Cart = (props) => {
         className={styles.calendar}
       />
       <div className={classes.total}>
-        <span>Odabrani datum: {date.toLocaleDateString()}</span>
-        <div>Ukupan iznos: {odabir.cijena}</div>
+        <span style={{fontFamily: "Staatliches, cursive"}}>Odabrani datum: {date.toLocaleDateString()}</span>
+        <div style={{fontFamily: "Staatliches, cursive"}}>Ukupan iznos: {odabir.cijena}</div>
       </div>
       <div className={classes.actions}>
         <Button className={classes["button--alt"]} onClick={props.onClose}>

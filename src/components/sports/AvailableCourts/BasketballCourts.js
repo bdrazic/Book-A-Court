@@ -26,7 +26,7 @@ const BasketballCourts = (props) => {
             className={classes.basketballCourts}
           >
             <div>
-              <h2 className={classes.title}>{basketballCourtsItems.name}</h2>
+              <h2 className={classes.title} style={{fontFamily: "Staatliches, cursive"}}>{basketballCourtsItems.name}</h2>
               <fieldset className={classes.fieldset}>
                 <input
                   onClick={showButtonHandler}
@@ -40,7 +40,7 @@ const BasketballCourts = (props) => {
                 <label for={basketballCourtsItems.id}>Rezerviraj</label>
               </fieldset>
             </div>
-            <div>{basketballCourtsItems.description}</div>
+            <div style={{fontWeight: "bold"}}>{basketballCourtsItems.description}</div>
             <div>{basketballCourtsItems.price} kn/h</div>
           </li>
         ))}

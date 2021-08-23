@@ -23,7 +23,7 @@ const FootballCourts = (props) => {
         {FOOTBALL_COURTS.map((footballCourtsItems) => (
           <li key={footballCourtsItems.id} className={classes.footballCourts}>
             <div>
-              <h2 className={classes.title}>{footballCourtsItems.name}</h2>
+              <h2 className={classes.title} style={{fontFamily: "Staatliches, cursive"}}>{footballCourtsItems.name}</h2>
               <fieldset className={classes.fieldset}>
                 <input
                   onClick={showButtonHandler}
@@ -37,7 +37,7 @@ const FootballCourts = (props) => {
                 <label for={footballCourtsItems.id}>Rezerviraj</label>
               </fieldset>
             </div>
-            <div>{footballCourtsItems.description}</div>
+            <div style={{fontWeight: "bold"}}>{footballCourtsItems.description}</div>
             <div>{footballCourtsItems.price} kn/h</div>
           </li>
         ))}

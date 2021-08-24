@@ -7,6 +7,7 @@ const Header = (props) => {
         <Fragment>
             <header className={classes.header}>
                 <h1 className={classes.headertitle}>Book-A-Court</h1>
+                <label className={classes.label} onClick={props.onShowLogin}>LOG IN</label>
             </header>
             <div className={classes['main-image']}>
                 <img src={ballsImage} alt="Tennis balls and Basketball ball"/>

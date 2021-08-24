@@ -1,29 +1,8 @@
-.cart-items {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    max-height: 20rem;
-    overflow: auto;
-  }
-  
-  .total {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin: 1rem 0;
-  }
-  
-  .actions {
-    text-align: right;
-  }
-  
   .actions button {
     font: inherit;
     cursor: pointer;
     background-color: transparent;
-    border: 1px solid #8a2b06;
+    border: 1px solid #e72e2e;
     padding: 0.5rem 2rem;
     border-radius: 25px;
     margin-left: 1rem;
@@ -32,17 +11,17 @@
   
   .actions button:hover,
   .actions button:active {
-    background-color: #5a1a01;
-    border-color: #5a1a01;
+    background-color: #e72e2e;
+    border-color: #e72e2e;
     color: white;
   }
   
   .actions .button--alt {
-    color: #8a2b06;
+    color: #e72e2e;
   }
   
   .actions .button {
-    background-color: #8a2b06;
+    background-color: #e72e2e;
     color: white;
   }
   
@@ -50,10 +29,42 @@
     text-align: center;
     font-family: "Staatliches", cursive;
   }
-  
-  .label {
-    font-family: "Staatliches", cursive;
-    font-weight: bold;
-    font-size: 25px;
+
+  .form-inputs {
+    margin-bottom: 0.5rem;
+    width: 80%;
   }
   
+  .p {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    color: #f00e0e;
+  }
+
+  .label {
+    display: inline-block;
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+    color: #fff;
+  }
+
+  
+  .login {
+    font-size: 0.8rem;
+    margin-top: 10px;
+    color: #fff;
+    width: 80%;
+    text-align: center;
+  }
+  
+  .login a {
+    text-decoration: none;
+    color: #27cdff;
+    font-weight: 600;
+  }
+
+  .contentRight {
+    border-radius: 0 10px 10px 0;
+    position: relative;
+    background: linear-gradient(90deg, rgb(40, 40, 40) 0%, rgb(17, 17, 17) 100%);
+  }

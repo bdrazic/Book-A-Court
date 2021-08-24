@@ -1,3 +1,13 @@
+.cartForm {
+  background-color:white !important;
+  background: white !important;
+}
+
+.modal {
+  background-color: inherit;
+  padding-left: 50px;
+}
+
 .cart-items {
   list-style: none;
   margin: 0;
@@ -56,3 +66,4 @@
   font-weight: bold;
   font-size: 25px;
 }
+

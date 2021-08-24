@@ -8,6 +8,15 @@
     margin-left: 1rem;
     font-family: "Staatliches", cursive;
   }
+
+  .modal {
+    background-color: inherit;
+    background: none;
+    background-origin: content-box;
+    backface-visibility: hidden;
+    visibility: hidden;
+    background: none;
+  }
   
   .actions button:hover,
   .actions button:active {
@@ -63,8 +72,4 @@
     font-weight: 600;
   }
 
-  .contentRight {
-    border-radius: 0 10px 10px 0;
-    position: relative;
-    background: linear-gradient(90deg, rgb(40, 40, 40) 0%, rgb(17, 17, 17) 100%);
-  }
+

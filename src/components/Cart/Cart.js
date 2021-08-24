@@ -61,28 +61,24 @@ const Cart = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log(username);
     console.log(time);
     console.log(odabir.naziv);
     console.log(odabir.opis);
     console.log(odabir.cijena);
   };
-
-  const [username, setUsername] = useState("");
-
-  const usernameChangeHandler = (event) => {
-    setUsername(event.target.value);
-  };
-
   const [time, setTime] = useState("");
 
   const timeChangeHandler = (event) => {
     setTime(event.target.value);
   };
 
-   return (
-    <form onSubmit={submitHandler}>
-      <Modal onClose={props.onClose}>
+  return (
+    <Modal
+      onClose={props.onClose}
+      style={{ backgroundColor: "white", background: "white" }}
+      className={classes.modal}
+    >
+      <form onSubmit={submitHandler} className={classes.cartForm}>
         <h1 className={classes.h1}>
           {odabir.naziv} - {odabir.opis}
         </h1>
@@ -102,20 +98,6 @@ const Cart = (props) => {
         </div>
         <div>
           <label className={classes.label}>
-            Rezervacija na ime:
-            <input
-              id="username"
-              style={{ fontSize: "20px", fontFamily: "Staatliches, cursive" }}
-              type="text"
-              placeholder="Username"
-              onChange={usernameChangeHandler}
-              name="username"
-              value={username}
-            />
-          </label>
-        </div>
-        <div>
-          <label className={classes.label}>
             Vrijeme rezervacije:
             <input
               id="time"
@@ -126,7 +108,8 @@ const Cart = (props) => {
               name="time"
               value={time}
             />
-          </label><span>*07:00h-22:00h</span>
+          </label>
+          <span>*07:00h-22:00h</span>
         </div>
         <div className={classes.actions}>
           <Button className={classes["button--alt"]} onClick={props.onClose}>
@@ -136,8 +119,8 @@ const Cart = (props) => {
             Potvrdi
           </Button>
         </div>
-      </Modal>
-    </form>
+      </form>
+    </Modal>
   );
 };
 

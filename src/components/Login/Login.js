@@ -1,21 +1,22 @@
 import Modal from "../UI/Modal";
 import classes from "./Login.module.css";
-import React, {  } from "react";
+import React from "react";
 import Button from "../UI/Button/Button";
 import UseLogin from "./UseLogin";
 import validate from "./ValidateInfo";
 import "./Login.css";
 
 const Login = (props) => {
-
-  const { handleChange, values, handleSubmit, errors } = UseLogin(
-    validate
-  );
+  const { handleChange, values, handleSubmit, errors } = UseLogin(validate);
 
   return (
-    <Modal onClose={props.onCloseLogin}>
-      <div className="">
-        <form className="form" onSubmit={handleSubmit}>
+    <Modal
+    onClose={props.onCloseLogin}
+    className={classes.modal}
+    style={{background:"none",backgroundColor:"none"}}
+  >
+    <div style={{backgroundColor:"none"}}>
+        <form className="login-form" onSubmit={handleSubmit}>
           <h1>Pridruži nam se tako što ćeš ispuniti potrebne informacije!</h1>
           <div className="form-inputs">
             <label htmlFor="username" className="form-label">
@@ -56,7 +57,7 @@ const Login = (props) => {
               className="form-input"
               type="password"
               name="password"
-              placeholder="Unesite Lozinku"
+              placeholder="Unesite lozinku"
               value={values.password}
               onChange={handleChange}
             />
@@ -75,9 +76,11 @@ const Login = (props) => {
               value={values.password2}
               onChange={handleChange}
             />
-            {errors.password2 && <p className={classes.p}>{errors.password2}</p>}
+            {errors.password2 && (
+              <p className={classes.p}>{errors.password2}</p>
+            )}
           </div>
-          <span className="">
+          <span className="form-input-login">
             Već ste registrirani? Za Log In <a href="#">pritisnite ovdje.</a>
           </span>
           <div className={classes.actions}>
@@ -92,7 +95,7 @@ const Login = (props) => {
             </Button>
           </div>
         </form>
-      </div>
+    </div>
     </Modal>
   );
 };

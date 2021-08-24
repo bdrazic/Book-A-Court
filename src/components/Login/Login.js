@@ -1,6 +1,6 @@
 import Modal from "../UI/Modal";
 import classes from "./Login.module.css";
-import React from "react";
+import React, { useState } from "react";
 import Button from "../UI/Button/Button";
 import UseLogin from "./UseLogin";
 import validate from "./ValidateInfo";
@@ -9,15 +9,24 @@ import "./Login.css";
 const Login = (props) => {
   const { handleChange, values, handleSubmit, errors } = UseLogin(validate);
 
+  const handleClickHandler = () => {
+    console.log(values.username);
+    console.log(values.email);
+    console.log(values.password);
+    console.log(values.password2);
+  };
+
   return (
     <Modal
-    onClose={props.onCloseLogin}
-    className={classes.modal}
-    style={{background:"none",backgroundColor:"none"}}
-  >
-    <div style={{backgroundColor:"none"}}>
+      onClose={props.onCloseLogin}
+      className={classes.modal}
+      style={{ background: "none", backgroundColor: "none" }}
+    >
+      <div style={{ backgroundColor: "none" }}>
         <form className="login-form" onSubmit={handleSubmit}>
-          <h1>Pridruži nam se tako što ćeš ispuniti potrebne informacije!</h1>
+          <h1 style={{ fontSize: "20px" }}>
+            Pridruži nam se tako što ćeš ispuniti potrebne informacije!
+          </h1>
           <div className="form-inputs">
             <label htmlFor="username" className="form-label">
               Korisničko ime:
@@ -84,7 +93,11 @@ const Login = (props) => {
             Već ste registrirani? Za Log In <a href="#">pritisnite ovdje.</a>
           </span>
           <div className={classes.actions}>
-            <Button className={classes.button} type="submit">
+            <Button
+              className={classes.button}
+              type="submit"
+              onClick={handleClickHandler}
+            >
               Potvrdi
             </Button>
             <Button
@@ -95,7 +108,7 @@ const Login = (props) => {
             </Button>
           </div>
         </form>
-    </div>
+      </div>
     </Modal>
   );
 };

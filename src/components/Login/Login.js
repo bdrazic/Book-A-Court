@@ -5,16 +5,18 @@ import Button from "../UI/Button/Button";
 import UseLogin from "./UseLogin";
 import validate from "./ValidateInfo";
 import "./Login.css";
+import FormSuccess from "./FormSuccess";
 
 const Login = (props) => {
-  const { handleChange, values, handleSubmit, errors } = UseLogin(validate);
+  const { handleChange, values, handleSubmit, errors, predaj } = UseLogin(validate);
+
+  const [loginSubmitted, setLoginIsSubmitted] = useState(false);
 
   const handleClickHandler = () => {
-    console.log(values.username);
-    console.log(values.email);
-    console.log(values.password);
-    console.log(values.password2);
-  };
+    if (Object.keys(errors).length === 0 && predaj === true) {
+        setLoginIsSubmitted(true);
+    }
+    };
 
   return (
     <Modal
@@ -23,8 +25,8 @@ const Login = (props) => {
       style={{ background: "none", backgroundColor: "none" }}
     >
       <div style={{ backgroundColor: "none" }}>
-        <form className="login-form" onSubmit={handleSubmit}>
-          <h1 style={{ fontSize: "20px" }}>
+        <form className="login-form" onSubmit={handleSubmit} id="SignUpForma">
+          <h1 style={{ fontSize: "20px" }} id="reg_uspjesna">
             Pridruži nam se tako što ćeš ispuniti potrebne informacije!
           </h1>
           <div className="form-inputs">
@@ -106,6 +108,7 @@ const Login = (props) => {
             >
               Zatvori
             </Button>
+            {loginSubmitted && <FormSuccess />}
           </div>
         </form>
       </div>

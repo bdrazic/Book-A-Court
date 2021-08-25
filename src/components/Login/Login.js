@@ -92,7 +92,7 @@ const Login = (props) => {
             )}
           </div>
           <span className="form-input-login">
-            Već ste registrirani? Za Log In <a href="#">pritisnite ovdje.</a>
+            {/* Već ste registrirani? Za Log In <a href="#">pritisnite ovdje.</a> */}
           </span>
           <div className={classes.actions}>
             <Button

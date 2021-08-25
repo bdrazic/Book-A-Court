@@ -1,7 +1,4 @@
 import React from "react";
-import CardTwo from "../UI/Card";
-import Modal from "../UI/Modal";
-import Button from "../UI/Button/Button";
 import classes from "./FormSuccess.module.css";
 
 function FormSuccess() {
@@ -11,13 +8,14 @@ function FormSuccess() {
         style={{
           color: "green",
           fontWeight: "bold",
-          fontSize: "20px",
+          fontSize: "23px",
           textAlign: "center",
           // marginTop:"15px",
           // padding:"10px",
           paddingLeft:"23px",
           alignContent:"center",
-          textShadow:"-2px 0 black"
+          textShadow:"-2px 0 black",
+          marginTop:"11px"
           }}
       >
         Registracija uspješna

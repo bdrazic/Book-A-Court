@@ -62,14 +62,14 @@
   .login {
     font-size: 0.8rem;
     margin-top: 10px;
-    color: #fff;
+    color: rgb(174, 223, 111);
     width: 80%;
     text-align: center;
   }
   
   .login a {
     text-decoration: none;
-    color: #27cdff;
+    color: #3d27ff;
     font-weight: 600;
   }
 

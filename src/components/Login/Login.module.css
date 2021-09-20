@@ -20,8 +20,8 @@
   
   .actions button:hover,
   .actions button:active {
-    background-color: #e72e2e;
-    border-color: #e72e2e;
+    background-color: #b3a5a5;
+    border-color: #bb1212;
     color: white;
   }
   
@@ -31,7 +31,7 @@
   
   .actions .button {
     background-color: #e72e2e;
-    color: white;
+    color: rgb(158, 143, 143);
   }
   
   .h1 {
@@ -47,7 +47,7 @@
   .p {
     font-size: 0.8rem;
     margin-top: 0.5rem;
-    color: #f00e0e;
+    color: #8a1010;
     font-weight: bold;
   }
 
@@ -62,14 +62,14 @@
   .login {
     font-size: 0.8rem;
     margin-top: 10px;
-    color: rgb(174, 223, 111);
+    color: rgb(223, 111, 190);
     width: 80%;
     text-align: center;
   }
   
   .login a {
     text-decoration: none;
-    color: #3d27ff;
+    color: #14087e;
     font-weight: 600;
   }
 

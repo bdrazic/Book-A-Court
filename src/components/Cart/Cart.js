@@ -103,7 +103,7 @@ const Cart = (props) => {
               id="time"
               style={{ fontSize: "20px", fontFamily: "Staatliches, cursive" }}
               type="time"
-              min="07:00"
+              min="07:00" required
               max="22:00"
               placeholder="Time"
               onChange={timeChangeHandler}

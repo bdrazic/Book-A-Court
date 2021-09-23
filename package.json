@@ -6,10 +6,16 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+<<<<<<< HEAD
     "axios": "^0.21.4",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "pg": "^8.7.1",
+=======
+    "bootstrap": "^5.1.1",
+    "nodeman": "^1.1.2",
+    "nodemon": "^2.0.12",
+>>>>>>> c886cc31be208c99646073ab0da9a1743eabe167
     "react": "^17.0.2",
     "react-calendar": "^3.4.0",
     "react-dom": "^17.0.2",

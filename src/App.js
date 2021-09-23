@@ -5,9 +5,10 @@ import React, { useState } from "react";
 import { CheckoutContext } from "./context/CheckoutContext";
 import Login from "./components/Login/Login";
 import Weather from "./components/Weather/Weather";
-
+import Navbar from './components/Navbar';
 
 function App() {
+
   const [isLoginShowing, setLoginIsShowing] = useState(false);
 
   const showLoginHandler = () => {
@@ -19,17 +20,29 @@ function App() {
   };
 
   return (
+
+
+
     <CheckoutContext.Provider
       value={document.getElementById("forma1", "forma2", "forma3")}
     >
       <div>
-        <Header onShowLogin={showLoginHandler}/>
+
+      
+
+      <Header onShowLogin={showLoginHandler}/>
         {isLoginShowing && <Login onCloseLogin={hideLoginHandler}/>}
+    
         <BookACourtSummary />
         <Weather />
         <AvailableSports />
+
+<Navbar/>
+
       </div>
     </CheckoutContext.Provider>
+
+
   );
 }
 

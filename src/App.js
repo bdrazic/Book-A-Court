@@ -7,7 +7,6 @@ import Login from "./components/Login/Login";
 import Navbar from './components/Navbar';
 
 function App() {
-<Navbar/>
 
   const [isLoginShowing, setLoginIsShowing] = useState(false);
 
@@ -20,16 +19,28 @@ function App() {
   };
 
   return (
+
+
+
     <CheckoutContext.Provider
       value={document.getElementById("forma1", "forma2", "forma3")}
     >
       <div>
-        <Header onShowLogin={showLoginHandler}/>
+
+      
+
+      <Header onShowLogin={showLoginHandler}/>
         {isLoginShowing && <Login onCloseLogin={hideLoginHandler}/>}
+    
         <BookACourtSummary />
         <AvailableSports />
+
+<Navbar/>
+
       </div>
     </CheckoutContext.Provider>
+
+
   );
 }
 

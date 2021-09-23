@@ -33,7 +33,7 @@ const AvailableSports = () => {
     <Fragment >
     <section className={classes.sports}>
       <Card>
-        <h1>IGRA MI SE</h1>
+        <h3 style={{margin:"0", padding:"0"}}>IGRA MI SE</h3>
         <ul onClick={showBasketballHandler}>KOŠARKA</ul>
         <ul onClick={showTennisHandler}>TENIS</ul>
         <ul onClick={showSoccerHandler}>NOGOMET</ul>

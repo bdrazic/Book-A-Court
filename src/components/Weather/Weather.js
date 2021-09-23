@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Card from "../UI/Card";
+import CardTwo from "../UI/CardTwo";
 
 export default function Weather() {
   const [weather, setWeather] = useState("");
@@ -25,10 +25,10 @@ export default function Weather() {
   }, []);
 
   return (
-    <Card>
+    <CardTwo>
       <h2 style={{margin:"5px", padding:"0"}}>PULA</h2>
       <p style={{margin:"0", padding:"0", fontWeight:"bold"}}>{temperature}°C</p>
       <p style={{margin:"0", padding:"0", fontWeight:"bold"}}>{weather}</p>
-    </Card>
+    </CardTwo>
   );
 }

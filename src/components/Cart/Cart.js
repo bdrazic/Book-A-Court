@@ -5,6 +5,7 @@ import React, { useContext, useState } from "react";
 import styles from "./Calendar.module.css";
 import { CheckoutContext } from "../../context/CheckoutContext";
 import Button from "../UI/Button/Button";
+import Weather from "../Weather/Weather";
 
 const Cart = (props) => {
   var odabir = useContext(CheckoutContext);
@@ -61,6 +62,7 @@ const Cart = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
+    console.log(date);
     console.log(time);
     console.log(odabir.naziv);
     console.log(odabir.opis);
@@ -113,6 +115,7 @@ const Cart = (props) => {
           </label>
           <span>*07:00h-22:00h</span>
         </div>
+        <Weather/>
         <div className={classes.actions}>
           <Button className={classes["button--alt"]} onClick={props.onClose}>
             Zatvori

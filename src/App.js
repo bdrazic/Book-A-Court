@@ -4,6 +4,7 @@ import AvailableSports from "./components/sports/AvailableSports";
 import React, { useState } from "react";
 import { CheckoutContext } from "./context/CheckoutContext";
 import Login from "./components/Login/Login";
+import Weather from "./components/Weather/Weather";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Header onShowLogin={showLoginHandler}/>
         {isLoginShowing && <Login onCloseLogin={hideLoginHandler}/>}
         <BookACourtSummary />
+        <Weather />
         <AvailableSports />
       </div>
     </CheckoutContext.Provider>

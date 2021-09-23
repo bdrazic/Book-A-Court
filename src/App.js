@@ -4,9 +4,11 @@ import AvailableSports from "./components/sports/AvailableSports";
 import React, { useState } from "react";
 import { CheckoutContext } from "./context/CheckoutContext";
 import Login from "./components/Login/Login";
-
+import Navbar from './components/Navbar';
 
 function App() {
+<Navbar/>
+
   const [isLoginShowing, setLoginIsShowing] = useState(false);
 
   const showLoginHandler = () => {

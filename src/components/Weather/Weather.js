@@ -8,7 +8,6 @@ export default function Weather() {
 
   const fetchWeather = async () => {
     try {
-      
       const res = await axios.get(
         `https://api.openweathermap.org/data/2.5/weather?q=Pula&appid=1a232b6a47ab4369cdc1afc7c429aead&units=metric`
       );
@@ -25,10 +24,23 @@ export default function Weather() {
   }, []);
 
   return (
-    <CardTwo>
-      <h2 style={{margin:"5px", padding:"0"}}>PULA</h2>
-      <p style={{margin:"0", padding:"0", fontWeight:"bold"}}>{temperature}°C</p>
-      <p style={{margin:"0", padding:"0", fontWeight:"bold"}}>{weather}</p>
-    </CardTwo>
+    <div
+      style={{
+        marginTop: "10px",
+        marginBottom: "10px",
+        padding: "0",
+        boxSizing: "border-box",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        boxShadow:"0 0 2px black"
+      }}
+    >
+      <h2 style={{ margin: "5px", padding: "0" }}>PULA</h2>
+      <h2 style={{ margin: "0", paddingLeft: "50px"}}>
+        {temperature}°C
+      </h2><br /><br /><br />
+      <h2 style={{ margin: "0", paddingLeft: "50px"}}>{weather}</h2>
+    </div>
   );
 }
